@@ -1,0 +1,35 @@
+.side-bar {
+  position: fixed;
+  top: 68px;
+  right: 36px;
+  transition-duration: 0.4s;
+  width: 180px;
+  background-color: #ffffff;
+  border-top: 1px solid #eeeeee;
+  z-index: 1;
+  .links {
+    text-align: center;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 600px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eeeeee;
+
+    a {
+      text-decoration: none;
+      color: #000000;
+      cursor: pointer;
+    }
+    a:hover {
+      color: #1f8efa;
+    }
+  }
+  .links:last-of-type a {
+    color: #c62121;
+  }
+  
+}
+
+.nonactive {
+  top: -200px;
+}

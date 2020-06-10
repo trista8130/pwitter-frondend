@@ -1,0 +1,77 @@
+.home-page {
+  .friends-container {
+    .friends-block {
+      min-height: 703px;
+      padding: 25px 0;
+      background-color: #ffffff;
+      box-shadow: 0px 2px 6px rgba(47, 83, 151, 0.1);
+      border-radius: 6px;
+      margin-bottom: 30px;
+      h2 {
+        margin-top: 0;
+        margin-left: 32px;
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: normal;
+        color: #919bab;
+      }
+      .friends-info-container {
+        min-height: 600px;
+        .friends-info {
+          display: flex;
+          justify-content: space-between;
+          align-self: center;
+          padding: 10px 28px;
+          margin-bottom: 10px;
+          img {
+            width: 30px;
+            height: 30px;
+            border-radius: 30px;
+          }
+          p {
+            margin: 0 30px 0 20px;
+            font-size: 13px;
+            font-weight: 500;
+            line-height: 30px;
+            color: #202841;
+          }
+          .num {
+            color: #919bab;
+            margin-right: 0;
+          }
+        }
+
+        .friends-info:hover {
+          cursor: pointer;
+          background-color: #1f8efa;
+          p {
+            color: #ffffff;
+          }
+        }
+      }
+      .pages-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+        .page-block {
+          width: 20px;
+          height: 20px;
+          font-size: 13px;
+          line-height: 16px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 10px;
+          cursor: pointer;
+        }
+        .page-block:hover {
+          background-color: #1f8efa;
+          color: #ffffff;
+        }
+        .page-block:last-of-type {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
