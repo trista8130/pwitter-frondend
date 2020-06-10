@@ -25,37 +25,35 @@ export default function Friends({ page, user }) {
   const handleClickFriend = (friend) => {
     const id = friend._id;
     window.localStorage.setItem("friendId", id);
+    
   };
 
   return (
     <div className="friends-list">
-      {friends.map(
-        (friend, i) =>
-          i < 9 && (
-            <div className="friends-block" key={i}>
-              <Link to="/friends">
-                <img
-                  src={friend.avatar}
-                  alt="profile"
-                  onClick={() => handleClickFriend(friend)}
-                />
-              </Link>
-              <div className="friends-info">
-                <div className="user-name">
-                  {friend.firstName} {friend.lastName}
-                </div>
-                <div className="friends-num">{`${friend.friends.length} Friends`}</div>
-              </div>
-              <button
-                onClick={() => {
-                  handleDeleteFriend(friend);
-                }}
-              >
-                <i class="far fa-times-circle"></i>
-              </button>
+      {friends.map((friend, i) => (
+        <div className="friends-block" key={i}>
+          <Link to="/friends">
+            <img
+              src={friend.avatar}
+              alt="profile"
+              onClick={() => handleClickFriend(friend)}
+            />
+          </Link>
+          <div className="friends-info">
+            <div className="user-name">
+              {friend.firstName} {friend.lastName}
             </div>
-          )
-      )}
+            <div className="friends-num">{`${friend.friends.length} Friends`}</div>
+          </div>
+          <button
+            onClick={() => {
+              handleDeleteFriend(friend);
+            }}
+          >
+            <i class="far fa-times-circle"></i>
+          </button>
+        </div>
+      ))}
     </div>
   );
 }

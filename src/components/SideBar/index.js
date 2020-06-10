@@ -6,6 +6,8 @@ import { AppContext } from "../../context";
 export default function SideBar({ setLogin, isActive, handleSideBar }) {
   const handleLogout = () => {
     window.localStorage.removeItem("token");
+    window.localStorage.removeItem("userId");
+  
     // setLogin(false);
   };
 

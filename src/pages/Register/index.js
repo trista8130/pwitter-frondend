@@ -48,11 +48,12 @@ export default function RegisterPage({ history }) {
 
       if (registerResult.data.success) {
         const loginResult = await AuthServices.handleLogin({ phone, password });
-
+        console.log(loginResult);
         if (loginResult.data.success) {
           const token = loginResult.data.data;
+          const userId = loginResult.data.data._id;
           window.localStorage.setItem("token", token);
-          // window.localStorage.setItem('userId', _id);
+          window.localStorage.setItem("userId", userId);
           history.push("/");
           window.location.reload();
         } else {

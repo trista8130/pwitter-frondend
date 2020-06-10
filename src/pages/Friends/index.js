@@ -7,7 +7,7 @@ import Friends from "../../components/Friends";
 
 export default function FriendsPage() {
   const { user } = useContext(AppContext);
-
+ 
   const friendId = window.localStorage.getItem("friendId");
   const userId = friendId;
   const [friendInfo, setFriendInfo] = useState({});
@@ -29,14 +29,13 @@ export default function FriendsPage() {
   let total, allFriends;
   if (subUser.friends) {
     allFriends = subUser.friends.length;
-    total = Math.ceil(allFriends / 10);
+    total = Math.ceil(allFriends / 10) - 1;
   }
+
   const pages = [];
   for (let i = 0; i <= total; i++) {
     pages.push(i);
   }
-
-
 
   return (
     <div className="friends-page page mt-70">
@@ -45,6 +44,7 @@ export default function FriendsPage() {
         <div className="title">
           <h2>My Friends</h2>
         </div>
+
         {pages.map((v) => (
           <Friends page={v} user={subUser} />
         ))}
