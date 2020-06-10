@@ -30,16 +30,16 @@ export default function RegisterPage({ history }) {
     setPreviewLink(link);
     const formData = new FormData();
     formData.append("files", file);
-    console.log(formData);
+
     // const uploadResult = await AuthServices.handleUpload(formData);
     const uploadResult = await axios.post(
       "http://localhost:3005/files/images",
       formData
     );
-    console.log(uploadResult);
+
     setValues({ ...values, avatar: uploadResult.data.data });
   };
-  console.log(values);
+  // console.log(values);
   const handleSubmit = async () => {
     try {
       const registerResult = await AuthServices.handleRegister(values);

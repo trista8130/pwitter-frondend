@@ -31,7 +31,7 @@ export default function FriendsMayKnow() {
 
   return (
     <div className="strangers-block">
-      <h2>Friends you may know</h2>
+      <h2>Friends may know</h2>
       {strangers &&
         strangers.map(
           (stranger, i) =>

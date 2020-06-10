@@ -22,7 +22,7 @@ export default function SideBar({ setLogin, isActive, handleSideBar }) {
       </div>
 
       <div onClick={handleLogout} className="links">
-        <Link to="/login">Log Out</Link>
+        <Link to="/register">Log Out</Link>
       </div>
     </div>
   );

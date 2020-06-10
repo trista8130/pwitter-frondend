@@ -13,13 +13,12 @@ export default function MyFriends() {
   let total, allFriends;
   if (user.friends) {
     allFriends = user.friends.length;
-    
+
     total = Math.ceil(allFriends / 10);
   }
   const pages = [];
   for (let i = 1; i <= total; i++) {
     pages.push(i);
-   
   }
 
   // const handlePageChange = (v) => {
@@ -28,8 +27,8 @@ export default function MyFriends() {
   // };
 
   const handlePageChange = async (v) => {
-    setPage(v-1);
-    console.log(page)
+    setPage(v - 1);
+
     const response = await UserServices.handleGetMyFriends(userId, page);
     setFriends(response.data.data.data);
   };

@@ -19,8 +19,9 @@ export default function ShareStatus() {
       mood,
       text,
     });
-    
+
     setText("");
+    window.location.reload();
   };
 
   return (
