@@ -23,7 +23,7 @@ export default function FriendsPosts() {
   const handleClickLike = (post) => {
     const authorId = post.authorId,
       postId = post._id;
-
+    window.location.reload();
     if (post.likes.indexOf(userId) < 0) {
       const handleLikeAPost = async () => {
         await PostServices.handleLikeAPost({
