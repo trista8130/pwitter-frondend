@@ -36,25 +36,22 @@ export default function Posts({ userId, page }) {
     fetchUserPosts();
   }, [user]);
 
-  const handleClickLike = (post) => {
+  const handleClickLike = async (post) => {
     const authorId = post.authorId,
       postId = post._id;
 
     if (post.likes.indexOf(userId) < 0) {
-      const handleLikeAPost = async () => {
-        const response = await PostServices.handleLikeAPost({
-          authorId,
-          postId,
-        });
-      };
-      return handleLikeAPost();
+      const response = await PostServices.handleLikeAPost({
+        authorId,
+        postId,
+      });
     } else {
-      const handleUnLikeAPost = async () => {
-        await PostServices.handleUnLikeAPost({ authorId, postId });
-      };
-      return handleUnLikeAPost();
+      await PostServices.handleUnLikeAPost({ authorId, postId });
     }
+
+    window.location.reload();
   };
+
   const handleCommentsActive = () => {
     setIsOpen(!isOpen);
   };

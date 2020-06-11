@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import UserServices from "../../service/users";
 import PostServices from "../../service/post";
 
-export default function AuthorComment({ userId, text }) {
+export default function AuthorComment({ comment,userId, text }) {
+  console.log(comment);
   const [author, setAuthor] = useState({});
   useEffect(() => {
     const fetchFriends = async () => {
@@ -12,6 +13,7 @@ export default function AuthorComment({ userId, text }) {
     fetchFriends();
   }, [userId]);
 
+  
   return (
     <div className="comments-info">
       <img src={author.avatar} alt="profile" />

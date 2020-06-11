@@ -23,7 +23,7 @@ export default function LoginPage({ history }) {
       const loginResult = await AuthServices.handleLogin(values)
       if (loginResult.data.success) {
         window.localStorage.setItem("token", loginResult.data.data);
-        window.localStorage.setItem('userId', loginResult.data.data._id);
+        
         history.push("/");
         window.location.reload();
         // if (remember) {

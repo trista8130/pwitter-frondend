@@ -30,7 +30,7 @@ const handleGetCurrentUser = () => {
 };
 
 const handleProfileChange = ({ userId, field, value }) => {
-  return axios.post(
+  return axios.put(
     `${url}/users/update`,
     { userId, field, value },
     {

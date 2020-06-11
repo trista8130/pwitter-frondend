@@ -54,6 +54,7 @@ export default function Comments({ comments, postId, isOpen, user }) {
               userId={comment.authorId}
               text={comment.text}
               key={i}
+              comment={comment}
             />
             {comment.likes ? (
               <button

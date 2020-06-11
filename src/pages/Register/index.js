@@ -52,8 +52,9 @@ export default function RegisterPage({ history }) {
         if (loginResult.data.success) {
           const token = loginResult.data.data;
           const userId = loginResult.data.data._id;
+          console.log(userId)
           window.localStorage.setItem("token", token);
-          window.localStorage.setItem("userId", userId);
+          // window.localStorage.setItem("userId", userId);
           history.push("/");
           window.location.reload();
         } else {

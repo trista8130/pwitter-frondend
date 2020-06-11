@@ -12,7 +12,7 @@ import PostServices from "../../service/post";
 
 export default function HomePage() {
   const { user } = useContext(AppContext);
-
+  window.localStorage.setItem("userId", user._id);
 
   return (
     <div className="home-page page mt-70">
