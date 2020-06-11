@@ -1,6 +1,6 @@
 const devUrl = 'http://localhost:3005';
 
-const prodUrl = 'https://pwitter.demo.bctc.io';
+const prodUrl = 'https://dashboard.heroku.com/apps/pwitter-trista';
 
 const currentEnv = process.env.REACT_APP_ENV;
 
